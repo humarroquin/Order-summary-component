@@ -1,0 +1,132 @@
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+:root {
+  /* font colors */
+  --fc-gray: #696969;
+  --fc-black: #010b13;
+  --fc-purple: #32127a;
+  --fc-white: #fff;
+
+  /* bg colors */
+  --bg-light-blue: #f0f8ff;
+  --bg-white: #fff;
+  --bg-purple: #32127a;
+  --bg-light-purple: #ccccff;
+  --bg-lighter-purple: #e6e6fa;
+}
+
+/* global */
+.btn {
+  border: none;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+.flex-container {
+  display: flex;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  background-color: var(--bg-light-blue);
+  font-family: sans-serif;
+  font-weight: normal;
+  line-height: 1.4;
+  font-size: 1rem;
+  color: var(--fc-gray);
+}
+
+.card-wrapper {
+  max-width: 22rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.card-content {
+  background-color: var(--bg-white);
+  padding: 2rem;
+  text-align: center;
+
+  display: grid;
+  gap: 1rem;
+}
+
+.card-title {
+  font-size: 1.4rem;
+  color: var(--fc-black);
+  font-weight: bold;
+}
+
+.payment-container {
+  background-color: var(--bg-lighter-purple);
+  padding: 1rem;
+  border-radius: 0.5rem;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.payment-container .plan-title {
+  color: var(--fc-black);
+  font-weight: bold;
+}
+
+.payment-container .plan-price {
+  display: block;
+  color: var(--fc-gray);
+  font-weight: normal;
+}
+
+.payment-container .left-side {
+  align-items: center;
+  gap: 1rem;
+}
+
+.payment-container .price-btn {
+  background: transparent;
+  font-size: 0.9rem;
+  text-decoration: underline;
+  font-weight: bold;
+  color: var(--fc-purple);
+}
+
+.payment-container .fa-music {
+  background: var(--bg-light-purple);
+  padding: 0.6rem;
+  border-radius: 50%;
+}
+
+.main-btn {
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.5rem;
+  color: var(--fc-white);
+  background-color: var(--bg-purple);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.btn-cancel {
+  font-weight: bold;
+}
