@@ -57,15 +57,17 @@ body {
   min-height: 100vh;
   display: grid;
   place-content: center;
-  background-color: var(--bg-vlight-blue);
+  background: url(/images/pattern-background-desktop.svg) no-repeat,
+    var(--bg-lighter-blue);
+  background-size: 100vw 25rem;
 
   font-family: var(--ff-body);
   font-weight: 500;
   line-height: 1.4;
-  color: var(--fc-light-blue);
 }
 
 .card-wrapper {
+  color: var(--fc-light-blue);
   max-width: 25rem;
   border-radius: 1rem;
   margin: 1rem;
