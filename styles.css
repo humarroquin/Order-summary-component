@@ -26,65 +26,76 @@ a {
   --ff-headers: 'Red Hat Display', sans-serif;
   /* font colors */
   --fc-light-blue: hsl(224, 23%, 55%);
-  --fc-dark-blue: hsl(223, 47%, 23%);
   --fc-blue: hsl(245, 75%, 52%);
+  --fc-dark-blue: hsl(223, 47%, 23%);
   --fc-white: hsl(0, 0%, 100%);
+  --fc-purple: hsl(245, 75%, 72%);
 
   /* bg colors */
-  --bg-light-blue: hsl(225, 100%, 94%);
   --bg-white: hsl(0, 0%, 100%);
   --bg-blue: hsl(245, 75%, 52%);
   --bg-light-blue: hsl(224, 23%, 55%);
-  --bg-lighter-blue: hsl(225, 100%, 98%);
+  --bg-lighter-blue: hsl(225, 100%, 94%);
+  --bg-vlight-blue: hsl(225, 100%, 98%);
+  --bg-purple: hsl(245, 75%, 72%);
 }
 
-/* global */
+/* reusable classes */
 .btn {
+  font-size: 0.9rem;
   border: none;
-  font-size: inherit;
   cursor: pointer;
+  transition: all 0.3s;
 }
 
 .flex-container {
   display: flex;
 }
 
+/* card styling */
 body {
   min-height: 100vh;
   display: grid;
   place-content: center;
-  background-color: var(--bg-lighter-blue);
-  font-family: sans-serif;
-  font-weight: normal;
+  background-color: var(--bg-vlight-blue);
+
+  font-family: var(--ff-body);
+  font-weight: 500;
   line-height: 1.4;
-  font-size: 1rem;
-  color: var(--fc-gray);
+  color: var(--fc-light-blue);
 }
 
 .card-wrapper {
-  max-width: 22rem;
+  max-width: 25rem;
   border-radius: 1rem;
+  margin: 1rem;
   overflow: hidden;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
+.card-img {
+  height: 13rem;
+  width: 100%;
+  object-fit: cover;
+}
+
 .card-content {
   background-color: var(--bg-white);
-  padding: 2rem;
+  padding: 2rem 3rem;
   text-align: center;
 
   display: grid;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .card-title {
   font-size: 1.4rem;
-  color: var(--fc-black);
-  font-weight: bold;
+  color: var(--fc-dark-blue);
+  font-weight: 900;
 }
 
 .payment-container {
-  background-color: var(--bg-lighter-purple);
+  background-color: var(--bg-vlight-blue);
   padding: 1rem;
   border-radius: 0.5rem;
 
@@ -93,44 +104,52 @@ body {
 }
 
 .payment-container .plan-title {
-  color: var(--fc-black);
-  font-weight: bold;
+  color: var(--fc-dark-blue);
+  font-weight: 700;
 }
 
 .payment-container .plan-price {
   display: block;
-  color: var(--fc-gray);
-  font-weight: normal;
+  font-weight: 500;
+  color: var(--fc-light-blue);
 }
 
-.payment-container .left-side {
+.payment-container .payment-left {
   align-items: center;
   gap: 1rem;
 }
 
-.payment-container .price-btn {
-  background: transparent;
-  font-size: 0.9rem;
-  text-decoration: underline;
-  font-weight: bold;
-  color: var(--fc-purple);
-}
-
-.payment-container .fa-music {
-  background: var(--bg-light-purple);
-  padding: 0.6rem;
+.payment-container .music-icon {
+  background: var(--bg-lighter-blue);
+  padding: 0.7rem;
   border-radius: 50%;
 }
 
-.main-btn {
+/* buttons */
+.btn--price {
+  background: transparent;
+  text-decoration: underline;
+  font-weight: 700;
+  color: var(--fc-blue);
+}
+
+.btn--price:hover {
+  color: var(--fc-purple);
+}
+
+.btn--main {
   padding: 0.8rem 1.5rem;
   border-radius: 0.5rem;
   color: var(--fc-white);
-  background-color: var(--bg-purple);
+  background-color: var(--bg-blue);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
     rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 
-.btn-cancel {
-  font-weight: bold;
+.btn--main:hover {
+  background: var(--fc-purple);
+}
+
+.btn--cancel:hover {
+  color: var(--fc-dark-blue);
 }
