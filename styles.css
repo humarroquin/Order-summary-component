@@ -66,6 +66,14 @@ body {
   line-height: 1.4;
 }
 
+@media (max-width: 45rem) {
+  body {
+    background: url(/images/pattern-background-mobile.svg) no-repeat,
+      var(--bg-lighter-blue);
+    background-size: 100vw 25rem;
+  }
+}
+
 .card-wrapper {
   color: var(--fc-light-blue);
   max-width: 25rem;
